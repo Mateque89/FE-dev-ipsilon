@@ -14,6 +14,7 @@ export interface CountrySummary {
 }
 export interface CountryByDate {
   Country: string;
+  Province: string;
   CountryCode: string;
   Slug: string;
   Date: string;

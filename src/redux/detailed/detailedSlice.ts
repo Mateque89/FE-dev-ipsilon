@@ -30,7 +30,7 @@ export const detailedSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(fetchCountry.fulfilled, (state, action) => {
-      state.days = action.payload;
+      state.days = action.payload.filter((x) => x.Province === '');
       state.loading = 'success';
     });
     builder.addCase(fetchCountry.rejected, (state, _) => {
