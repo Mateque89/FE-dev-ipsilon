@@ -28,7 +28,7 @@ export const countriesSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder.addCase(fetchNames.fulfilled, (state, action) => {
-      state.countryList = action.payload;
+      state.countryList = action.payload.sort((a, b) => (a.Country > b.Country ? 1 : -1));
       state.loading = 'success';
     });
     builder.addCase(fetchNames.rejected, (state, _) => {
