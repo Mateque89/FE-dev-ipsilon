@@ -19,6 +19,7 @@ import TableHead from '@mui/material/TableHead';
 import { styled } from '@mui/material/styles';
 import { tableCellClasses } from '@mui/material/TableCell';
 import { red } from '@mui/material/colors';
+import { useEffect } from 'react';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
@@ -108,6 +109,10 @@ function TableSummary(props: { countries: CountrySummary[] }) {
     ) => {
         setPage(newPage);
     };
+
+    useEffect(() => {
+        setPage(0);
+    }, [props.countries])
 
     const handleChangeRowsPerPage = (
         event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
