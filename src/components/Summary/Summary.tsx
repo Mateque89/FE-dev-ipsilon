@@ -22,9 +22,9 @@ function Summary(): JSX.Element {
 
     return (
         <Container maxWidth="md" sx={{ padding: "10px" }}>
-            <Box mb={1} sx={{ width: "100%" }} textAlign='center'>
+            <Box mb={1} sx={{ width: "100%" }} textAlign='center' >
                 <TextField
-                    sx={{ width: "50%", margin: "auto" }}
+                    sx={{ width: "50%", margin: "auto", }}
                     InputProps={{
                         startAdornment: (
                             <InputAdornment position="start">

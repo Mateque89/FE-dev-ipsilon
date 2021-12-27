@@ -6,6 +6,8 @@ import Search from '../Search/Search';
 import { Provider } from 'react-redux'
 import { store } from '../../redux/store';
 import Summary from '../Summary/Summary';
+import Charts from '../Charts/Charts';
+
 
 const theme = createTheme({
   palette: {
@@ -22,6 +24,7 @@ function App(): JSX.Element {
         <Navbar />
         <Summary />
         <Search />
+        <Charts />
       </ThemeProvider >
     </Provider>
   );

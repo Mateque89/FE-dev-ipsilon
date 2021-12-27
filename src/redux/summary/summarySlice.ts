@@ -1,41 +1,38 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { CountrySummary } from "../../react-app-env";
-import { getCountriesSummary } from "../../utility/API";
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { CountrySummary } from '../../react-app-env';
+import { getCountriesSummary } from '../../utility/API';
 
-interface CounterState {
+interface SummaryState {
   countries: CountrySummary[];
-  loading: "failed" | "success" | "loading";
+  loading: 'failed' | 'success' | 'loading';
 }
 
-const initialState: CounterState = {
+const initialState: SummaryState = {
   countries: [],
-  loading: "loading",
+  loading: 'loading',
 };
 
-export const fetchCountries = createAsyncThunk(
-  "countries/fetchSummary",
-  async () => {
-    const response = await getCountriesSummary();
-    return response.data as unknown as {
-      Countries: CountrySummary[];
-    };
-  }
-);
+export const fetchCountries = createAsyncThunk('summary/fetchSummary', async () => {
+  const response = await getCountriesSummary();
+  return response.data as unknown as {
+    Countries: CountrySummary[];
+  };
+});
 
 export const summarySlice = createSlice({
-  name: "counter",
+  name: 'summary',
   initialState,
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(fetchCountries.fulfilled, (state, action) => {
       state.countries = action.payload.Countries;
-      state.loading = "success";
+      state.loading = 'success';
     });
     builder.addCase(fetchCountries.rejected, (state, _) => {
-      state.loading = "failed";
+      state.loading = 'failed';
     });
     builder.addCase(fetchCountries.pending, (state, _) => {
-      state.loading = "loading";
+      state.loading = 'loading';
     });
   },
 });

@@ -1,9 +1,13 @@
-import { configureStore } from "@reduxjs/toolkit";
-import summarySlice from "./summary/summarySlice";
+import { configureStore } from '@reduxjs/toolkit';
+import countriesSlice from './countries/countriesSlice';
+import detailedSlice from './detailed/detailedSlice';
+import summarySlice from './summary/summarySlice';
 
 export const store = configureStore({
   reducer: {
     summary: summarySlice,
+    detailed: detailedSlice,
+    countries: countriesSlice,
   },
 });
 
