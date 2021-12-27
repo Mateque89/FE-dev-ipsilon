@@ -7,12 +7,36 @@ import { useAppDispatch, useAppSelector } from '../../redux/hooks';
 import { fetchNames, setPickedCountry } from '../../redux/countries/countriesSlice';
 import { MenuItem, Typography } from '@mui/material';
 import { red } from '@mui/material/colors';
+import { makeStyles } from '@mui/styles';
+
+
+
+const useStyles = makeStyles((theme: any) => ({
+    root: {
+        display: "flex",
+        borderRadius: 3,
+        backgroundColor: red[600],
+        padding: "5px",
+        alignItems: "center",
+        flexDirection: "row",
+        justifyContent: 'space-evenly',
+        "&>": {
+            [theme.breakpoints.down(600)]: {
+                width: "100%"
+            }
+        },
+        [theme.breakpoints.down(600)]: {
+            flexDirection: "column",
+        }
+    }
+}));
 
 
 
 function Search(): JSX.Element {
     const dispatch = useAppDispatch();
     const countriesState = useAppSelector((state) => state.countries);
+    const classes = useStyles();
 
     const handleChange = (event: SelectChangeEvent) => {
         dispatch(setPickedCountry(event.target.value));
@@ -25,17 +49,11 @@ function Search(): JSX.Element {
     return (
         <Container maxWidth="md" sx={{ padding: "10px" }}>
             <Paper
-                sx={{
-                    display: "flex",
-                    borderRadius: 3,
-                    backgroundColor: red[600],
-                    padding: "5px",
-                    justifyContent: "center",
-                    alignItems: "center"
-                }}>
+                className={classes.root}
+            >
                 <Typography variant="h6" sx={{
                     fontWeight: 'bold', color: "#ffff",
-                    width: "100%", textAlign: "center"
+                    textAlign: "center"
                 }}
                 >
                     Pick for country data

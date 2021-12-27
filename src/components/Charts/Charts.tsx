@@ -27,9 +27,7 @@ function Charts(): JSX.Element {
     }, [pickedCountry]);
 
     const _render = () => {
-        if (!isCountryPicked) {
-            return null;
-        } else if (fetchState === "loading") {
+        if (fetchState === "loading") {
             return (
                 <CircularProgress sx={{
                     display: "table",
@@ -60,15 +58,17 @@ function Charts(): JSX.Element {
 
     return (
         <Container maxWidth="md" sx={{ padding: "10px" }}>
-            <Paper
-                sx={{
-                    borderRadius: 3,
-                    padding: "10px",
-                    background: "#F8F8FF",
-                }}
-            >
-                {_render()}
-            </Paper>
+            {isCountryPicked &&
+                <Paper
+                    sx={{
+                        borderRadius: 3,
+                        padding: "10px",
+                        background: "#F8F8FF",
+                    }}
+                >
+                    {_render()}
+                </Paper>
+            }
         </Container >
     );
 
