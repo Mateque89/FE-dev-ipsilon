@@ -2,7 +2,7 @@ import Box from '@mui/material/Box';
 import React from 'react'
 import { makeStyles } from '@mui/styles';
 import { red } from '@mui/material/colors';
-import { Typography } from '@mui/material';
+
 
 const useStyles = makeStyles({
     root: {
