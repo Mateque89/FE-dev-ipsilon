@@ -30,7 +30,12 @@ function Charts(): JSX.Element {
         if (!isCountryPicked) {
             return null;
         } else if (fetchState === "loading") {
-            return <CircularProgress />
+            return (
+                <CircularProgress sx={{
+                    display: "table",
+                    margin: "0 auto",
+                }} />
+            )
         } else if (fetchState === "failed") {
             return (
                 <Box sx={{ display: "flex", flexDirection: "row", justifyContent: 'space-evenly' }}>
@@ -59,7 +64,7 @@ function Charts(): JSX.Element {
                 sx={{
                     borderRadius: 3,
                     padding: "10px",
-                    background: "#F8F8FF"
+                    background: "#F8F8FF",
                 }}
             >
                 {_render()}

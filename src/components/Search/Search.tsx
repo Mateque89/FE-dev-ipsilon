@@ -43,7 +43,7 @@ function Search(): JSX.Element {
                 <Select
                     value={countriesState.pickedCountry ? countriesState.pickedCountry : ""}
                     onChange={handleChange}
-                    sx={{ width: "60%", backgroundColor: "#ffff", textAlign: "center", }}
+                    sx={{ width: "60%", backgroundColor: "#ffff", textAlign: "center", borderRadius: 2, }}
                 >
                     {countriesState.countryList.map(x => <MenuItem key={x.ISO2} value={x.Slug}>{x.Country}</MenuItem>)}
                 </Select>
