@@ -38,13 +38,13 @@ function Charts(): JSX.Element {
             return (
                 <Box sx={{ display: "flex", flexDirection: "row", justifyContent: 'space-evenly' }}>
                     <FontAwesomeIcon icon={faExclamationTriangle} size="3x" />
-                    <Typography variant="h4" >Problem with fetching data</Typography>
+                    <Typography sx={{ textAlign: "center" }} variant="h4" >Problem with fetching data</Typography>
                 </Box>)
         } else if (fetchState === "success" && days.length === 0) {
             return (
                 <Box sx={{ display: "flex", flexDirection: "row", justifyContent: 'space-evenly' }}>
                     <FontAwesomeIcon icon={faSadCry} size="3x" />
-                    <Typography variant="h4" >This country doesn't report data</Typography>
+                    <Typography sx={{ textAlign: "center" }} variant="h4" >This country doesn't report data</Typography>
                 </Box>)
         } else {
             return (
