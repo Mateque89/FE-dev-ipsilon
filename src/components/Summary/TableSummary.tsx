@@ -136,13 +136,13 @@ function TableSummary(props: { countries: CountrySummary[] }) {
                             <TableCell component="th" scope="row">
                                 {row.Country}
                             </TableCell>
-                            <TableCell style={{ width: 160 }} align="right">
+                            <TableCell style={{ width: 100 }} align="right">
                                 {row.TotalConfirmed}
                             </TableCell>
-                            <TableCell style={{ width: 160 }} align="right">
+                            <TableCell style={{ width: 100 }} align="right">
                                 {row.TotalDeaths}
                             </TableCell>
-                            <TableCell style={{ width: 160 }} align="right">
+                            <TableCell style={{ width: 100 }} align="right">
                                 {row.TotalRecovered}
                             </TableCell>
                         </TableRow>
