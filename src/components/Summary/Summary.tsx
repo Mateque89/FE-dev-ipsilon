@@ -36,7 +36,7 @@ function Summary(): JSX.Element {
                     onChange={onFilterChange}
                 />
             </Box>
-            <TableSummary countries={countries.filter(x => x.Country.startsWith(filterName))} />
+            <TableSummary countries={countries.filter(x => x.Country.toLowerCase().startsWith(filterName.toLowerCase()))} />
         </Container>
     )
 }
