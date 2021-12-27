@@ -7,6 +7,7 @@ import { Provider } from 'react-redux'
 import { store } from '../../redux/store';
 import Summary from '../Summary/Summary';
 import Charts from '../Charts/Charts';
+import Footer from '../Footer/Footer';
 
 
 const theme = createTheme({
@@ -25,6 +26,7 @@ function App(): JSX.Element {
         <Summary />
         <Search />
         <Charts />
+        <Footer />
       </ThemeProvider >
     </Provider>
   );
