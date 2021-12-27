@@ -14,7 +14,7 @@ const useStyles = makeStyles({
         color: "#ffff",
         fontWeight: "400",
         fontSize: "large",
-        padding: "10px",
+        padding: "0 0 10px",
         '&>span': {
             fontWeight: '600'
         }
