@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`footer renders correctly 1`] = `
+<div
+  className="makeStyles-root-1 MuiBox-root css-0"
+>
+  <span>
+    COVID19-stats
+  </span>
+  , app made for recruitment purposes by 
+  <span>
+    Szymon Pielat
+  </span>
+  .
+</div>
+`;

@@ -27,6 +27,7 @@
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.6",
     "react-scripts": "5.0.0",
+    "react-test-renderer": "^17.0.2",
     "recharts": "^2.1.8",
     "typescript": "^4.5.4",
     "web-vitals": "^2.1.2"
@@ -54,5 +55,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/react-test-renderer": "^17.0.1",
+    "jest-watch-typeahead": "^0.6.5"
   }
 }
