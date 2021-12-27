@@ -25,7 +25,7 @@ function Footer() {
     const classes = useStyles();
     return (
         <Box className={classes.root}>
-            <span>COVID19-stats app</span>, made for recruitment purposes by <span>Szymon Pielat</span>.
+            <span>COVID19-stats</span>, app made for recruitment purposes by <span>Szymon Pielat</span>.
         </Box>
     )
 }
